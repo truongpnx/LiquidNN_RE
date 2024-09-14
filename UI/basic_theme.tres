@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dhcdd7n6apl6t"]
+
+[ext_resource type="FontFile" uid="uid://bal6f5w8o2hoe" path="res://assets/font/PixelifySans-VariableFont_wght.ttf" id="1_qm1pw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h17t7"]
+bg_color = Color(0.150075, 0.150075, 0.150075, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(5, 5)
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_qm1pw")
+Button/styles/normal = SubResource("StyleBoxFlat_h17t7")
+ProgressBar/font_sizes/font_size = 32
+ProgressBar/fonts/font = ExtResource("1_qm1pw")

@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=3 uid="uid://cecnv8ib7av7w"]
+
+[ext_resource type="Texture2D" uid="uid://d3cklbsm03pmn" path="res://assets/sprites/00.png" id="1_42w13"]
+[ext_resource type="Texture2D" uid="uid://cup0nk2kejt10" path="res://assets/sprites/button_sprite.png" id="2_yri1w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npldo"]
+atlas = ExtResource("1_42w13")
+region = Rect2(288.836, 33.7567, 14.3239, 12.5671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcvsw"]
+atlas = ExtResource("1_42w13")
+region = Rect2(288.836, 33.7567, 14.3239, 12.5671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkr67"]
+atlas = ExtResource("1_42w13")
+region = Rect2(147, 2, 9, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6mbp"]
+atlas = ExtResource("1_42w13")
+region = Rect2(165, 2, 9, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg76h"]
+atlas = ExtResource("2_yri1w")
+region = Rect2(4, 3.90202, 24, 24.098)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo1gd"]
+atlas = ExtResource("2_yri1w")
+region = Rect2(36, 4, 24, 24)
+
+[node name="MobileControl" type="CanvasLayer"]
+
+[node name="Jump" type="TouchScreenButton" parent="."]
+position = Vector2(188, 509)
+scale = Vector2(5, 5)
+texture_normal = SubResource("AtlasTexture_npldo")
+texture_pressed = SubResource("AtlasTexture_jcvsw")
+action = "jump"
+
+[node name="Left" type="TouchScreenButton" parent="."]
+position = Vector2(96, 594)
+scale = Vector2(6, 5)
+texture_normal = SubResource("AtlasTexture_lkr67")
+action = "move_left"
+
+[node name="Right" type="TouchScreenButton" parent="."]
+position = Vector2(292, 594)
+scale = Vector2(6, 5)
+texture_normal = SubResource("AtlasTexture_m6mbp")
+action = "move_right"
+
+[node name="Skill_1" type="TouchScreenButton" parent="."]
+position = Vector2(954, 579)
+scale = Vector2(2.5, 2.5)
+texture_normal = SubResource("AtlasTexture_kg76h")
+texture_pressed = SubResource("AtlasTexture_lo1gd")
+action = "skill_1"
+
+[node name="Skill_2" type="TouchScreenButton" parent="."]
+position = Vector2(991, 505)
+scale = Vector2(2.5, 2.5)
+texture_normal = SubResource("AtlasTexture_kg76h")
+texture_pressed = SubResource("AtlasTexture_lo1gd")
+action = "skill_2"
+
+[node name="Skill_3" type="TouchScreenButton" parent="."]
+position = Vector2(1075, 477)
+scale = Vector2(2.5, 2.5)
+texture_normal = SubResource("AtlasTexture_kg76h")
+texture_pressed = SubResource("AtlasTexture_lo1gd")
+action = "skill_3"
+
+[node name="Attack" type="TouchScreenButton" parent="."]
+position = Vector2(1059, 578)
+scale = Vector2(3.5, 3.5)
+texture_normal = SubResource("AtlasTexture_kg76h")
+texture_pressed = SubResource("AtlasTexture_lo1gd")
+action = "attack"
+
+[node name="Dash" type="TouchScreenButton" parent="."]
+position = Vector2(1175, 556)
+scale = Vector2(2, 2)
+texture_normal = SubResource("AtlasTexture_kg76h")
+texture_pressed = SubResource("AtlasTexture_lo1gd")
+action = "dash"

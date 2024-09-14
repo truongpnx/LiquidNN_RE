@@ -1,0 +1,13 @@
+HitBox
+HurtBox
+Health
+CollisionShape2D
+Area2D
+Sprite2D
+AnimationPlayer
+Node
+Node2D
+RigidBody2D
+TouchScreenButton
+CanvasLayer
+TextureButton

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqr6ps1ixwrhh"]
+
+[ext_resource type="Script" path="res://obstacles/hurt_box.gd" id="1_kj6xd"]
+[ext_resource type="Texture2D" uid="uid://d3cklbsm03pmn" path="res://assets/sprites/00.png" id="1_l21g3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pc0jp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vu6j"]
+atlas = ExtResource("1_l21g3")
+region = Rect2(178, 51, 12, 10)
+
+[node name="Bullet" type="Area2D" node_paths=PackedStringArray("parent")]
+script = ExtResource("1_kj6xd")
+damage = 99
+parent = NodePath(".")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pc0jp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.8, 1.8)
+texture = SubResource("AtlasTexture_8vu6j")

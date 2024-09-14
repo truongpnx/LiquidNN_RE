@@ -1,0 +1,8 @@
+res://characters/char1/bobby.tscn::a6821dd6f73f732325f828557ef09f69::1725505836::res://.godot/exported/133200997/export-135d9fda12ec8b52893242fcdab55827-bobby.scn
+res://game_play/play_scene.tscn::26c57f69fe6570e9153b47d950c914c5::1725506096::res://.godot/exported/133200997/export-6a0577283cbe99fad422ecaa2a2f4920-play_scene.scn
+res://UI/loading/loading.tscn::c2602f5d583ebb701778007be5c3c417::1725503977::res://.godot/exported/133200997/export-99268e1d90ef06ed2156fdc9ce226865-loading.scn
+res://UI/main_menu/main_menu.tscn::0fd5ed7637db49d2e1fd29546d068181::1725503977::res://.godot/exported/133200997/export-fbeb5e82cba47628bddb1cb9fb3eaf3f-main_menu.scn
+res://UI/basic_theme.tres::634587da606f571953eb20ba3d80c773::1725505535::res://.godot/exported/133200997/export-91a9f6cbab376603708a98ca82378b2c-basic_theme.res
+res://UI/detail_theme.tres::a5489172b09dc1e3f98415ec6f867f29::1725505535::res://.godot/exported/133200997/export-272e4d4747d47296973399b0965eb441-detail_theme.res
+res://UI/player_control.tscn::ac4db7ed5dc8022b54701c0cf5bc8006::1725503977::res://.godot/exported/133200997/export-2ce46bb470147b23560688bea36dd0a4-player_control.scn
+res://UI/mobile_control.tscn::da5004835cfc55ccb18c8de11ee05999::1725506450::res://.godot/exported/133200997/export-bcc010d98e186e62ac6af120dadc9cfc-mobile_control.scn

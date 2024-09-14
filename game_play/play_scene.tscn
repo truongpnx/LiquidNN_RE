@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://b80dyom62gnkv"]
+
+[ext_resource type="Script" path="res://game_play/play_scene.gd" id="1_pvmii"]
+[ext_resource type="PackedScene" uid="uid://yq2iy85pmpoc" path="res://characters/char1/bobby.tscn" id="2_cwkd6"]
+[ext_resource type="PackedScene" uid="uid://cecnv8ib7av7w" path="res://UI/mobile_control.tscn" id="5_o5aj7"]
+[ext_resource type="Script" path="res://scripts/input_mapper.gd" id="6_8vwqb"]
+[ext_resource type="Script" path="res://UI/mobile_control.gd" id="6_vomjb"]
+[ext_resource type="PackedScene" uid="uid://dqr6ps1ixwrhh" path="res://obstacles/bullet.tscn" id="7_luq0e"]
+
+[sub_resource type="Gradient" id="Gradient_pc82x"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 0.784314, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_is6lm"]
+gradient = SubResource("Gradient_pc82x")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_675n0"]
+size = Vector2(1508, 126)
+
+[sub_resource type="Gradient" id="Gradient_ubxgh"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.55562, 0.55562, 0.55562, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_hhx3g"]
+gradient = SubResource("Gradient_ubxgh")
+
+[node name="play_scene" type="Node2D"]
+script = ExtResource("1_pvmii")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5.90625, 714)
+texture = SubResource("GradientTexture1D_is6lm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MobileControl" parent="." node_paths=PackedStringArray("character") instance=ExtResource("5_o5aj7")]
+script = ExtResource("6_vomjb")
+character = NodePath("../Bobby")
+
+[node name="walls" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="walls"]
+position = Vector2(0, 307)
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D"]
+position = Vector2(0, 63)
+shape = SubResource("RectangleShape2D_675n0")
+
+[node name="Sprite2D" type="Sprite2D" parent="walls/StaticBody2D"]
+position = Vector2(0, 62.75)
+scale = Vector2(5.86719, 126.5)
+texture = SubResource("GradientTexture1D_hhx3g")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="walls"]
+position = Vector2(0, -469)
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D4"]
+position = Vector2(0, 57)
+shape = SubResource("RectangleShape2D_675n0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="walls"]
+position = Vector2(-645, 0)
+rotation = 1.57079
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D2"]
+position = Vector2(0, 63)
+shape = SubResource("RectangleShape2D_675n0")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="walls"]
+position = Vector2(648, 0)
+rotation = -1.57079
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D3"]
+position = Vector2(0, 63)
+shape = SubResource("RectangleShape2D_675n0")
+
+[node name="Bullet" parent="." instance=ExtResource("7_luq0e")]
+position = Vector2(126, 107)
+
+[node name="Bullet2" parent="." instance=ExtResource("7_luq0e")]
+position = Vector2(-165, 106)
+
+[node name="Bobby" parent="." node_paths=PackedStringArray("control_mapper") instance=ExtResource("2_cwkd6")]
+control_mapper = NodePath("InputMapper")
+
+[node name="InputMapper" type="Node" parent="Bobby"]
+script = ExtResource("6_8vwqb")
